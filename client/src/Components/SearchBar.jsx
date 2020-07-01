@@ -12,6 +12,7 @@ function SearchBar(props) {
             <div className="col">
               <div className="input-group mb-3">
                 <input
+                  autoComplete="off"
                   name="search"
                   value={props.search}
                   onChange={props.handleChange}
