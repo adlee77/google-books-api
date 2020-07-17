@@ -22,7 +22,9 @@ function Results(props){
                         <img src={result.volumeInfo.imageLinks.smallThumbnail} alt="book cover missing"/>
                     </div>
                     </div>
-                    <button className="btn btn-primary searchbtn" onClick={() => props.handleSave(result.id)}>Save!</button>
+                    <div className="row">
+                    <button className="btn btn-primary searchbtn" id="savebtn" onClick={() => props.handleSave(result.id)}>Save!</button>
+                    </div>
                     </div>
                     </div>
                 )

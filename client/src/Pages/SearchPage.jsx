@@ -6,7 +6,7 @@ import API from "../Utils/API";
 class SearchPage extends Component{
     state = {
         results: [],
-        search: "",
+        search: ""
     }
     handleChange = event => {
         const { name, value } = event.target
@@ -30,6 +30,7 @@ class SearchPage extends Component{
             image: target.volumeInfo.imageLinks.smallThumbnail,
             link: target.volumeInfo.infoLink
         })
+        alert("Book was saved!")
     }
 
     render(){
