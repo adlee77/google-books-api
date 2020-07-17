@@ -1,9 +1,10 @@
 import React from "react";
+import './Style.css';
 
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="/">
+      <a className="navbar-brand" id="navtitle" href="/">
         Google Books
       </a>
       <button
@@ -20,12 +21,12 @@ function Navbar() {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <a className="nav-link" href="/">
+            <a className="nav-link" href="/" id="navtitle">
               Search <span className="sr-only">(current)</span>
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/saved">
+            <a className="nav-link" id="navtitle" href="/saved">
               Saved
             </a>
           </li>

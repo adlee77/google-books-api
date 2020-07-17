@@ -22,7 +22,6 @@ class SearchPage extends Component{
         })
     }
     handleSave = id => {
-        console.log("this is handlesave")
         const target = this.state.results.find(book => book.id === id);
         API.saveBook({
             title: target.volumeInfo.title,

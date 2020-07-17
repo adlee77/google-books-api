@@ -1,9 +1,10 @@
 import React from "react";
+import './Style.css';
 
 function Header() {
     return(
         <>
-        <div className="container">
+        <div className="container header-container">
             <div className="row">
                 <div className="col text-center">
                     <h1>Google Books Search</h1>

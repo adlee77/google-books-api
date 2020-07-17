@@ -1,4 +1,5 @@
 import React from "react";
+import './Style.css';
 
 function Results(props){
     return(
@@ -13,18 +14,17 @@ function Results(props){
                             <a href={result.volumeInfo.infoLink}><h5 className="card-title">{result.volumeInfo.title}</h5></a>
                         </div>
                         <div className="row">
-                            <h6>{result.volumeInfo.authors.join(", ")}</h6>
+                            <h6>{result.volumeInfo.authors ? result.volumeInfo.authors.join(", ") : result.volumeInfo.authors}</h6>
                         </div>
+                        <p>{result.volumeInfo.description}</p>
                     </div>
                     <div className="col text-right">
-                        <img src={result.volumeInfo.imageLinks.smallThumbnail}/>
+                        <img src={result.volumeInfo.imageLinks.smallThumbnail} alt="book cover missing"/>
                     </div>
                     </div>
-                    <p maxLength="100">{result.volumeInfo.description.replace(/^(.{240}[^\s]*).*/, "$1...")}</p>
-                    <button className="btn btn-primary" onClick={() => props.handleSave(result.id)}>Save!</button>
+                    <button className="btn btn-primary searchbtn" onClick={() => props.handleSave(result.id)}>Save!</button>
                     </div>
                     </div>
-                  
                 )
             })}
         </div>

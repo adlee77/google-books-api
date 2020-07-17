@@ -1,4 +1,5 @@
 import React from "react";
+import './Style.css';
 
 function SearchBar(props) {
   console.log(props)
@@ -6,7 +7,7 @@ function SearchBar(props) {
       <>
         <div className="container">
           <div className="row">
-            <div className="col">Book Search</div>
+          <div className="col">Book Search</div>
           </div>
           <div className="row">
             <div className="col">
@@ -19,7 +20,7 @@ function SearchBar(props) {
                   className="form-control"
                 />
                 <div className="input-group-append">
-                  <button className="btn btn-outline-secondary" type="Submit" onClick={props.handleSubmit}>
+                  <button className="btn btn-outline-secondary searchbtn" type="Submit" onClick={props.handleSubmit}>
                     Search
                   </button>
                 </div>

@@ -10,6 +10,10 @@ class Saved extends Component {
         .then(res => this.setState({ books: res.data}))
         .catch(console.err)
     }
+    handleClick = id => {
+      API.deleteSavedBook(id)
+      .then(window.location.reload())
+    }
     render() {
     return (
       <div className="container">
@@ -26,16 +30,22 @@ class Saved extends Component {
                 </div>
                 <div className="row">
                   <h6>{book.author.join(", ")}</h6>
-                  <p>{book.description.replace(/^(.{240}[^\s]*).*/, "$1...")}</p>
                 </div>
+                <p>{book.description ? book.description.replace(/^(.{240}[^\s]*).*/, "$1...") : book.description}</p>
               </div>
               <div className="col text-right">
-                <img src={book.image} />
+                <img src={book.image} alt="book cover missing"/>
               </div>
             </div>
+            <button className="btn btn-outline-secondary searchbtn" onClick={() => this.handleClick(book._id)}>
+                  Delete
+            </button>
           </div>
         </div>
           )})}
+        <div className="col text-center">
+        <h3 id="noSaved">{this.state.books.length === 0 ? "No Saved Books!" : ""}</h3>
+        </div>
       </div>
     );
     }

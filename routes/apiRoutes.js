@@ -17,6 +17,10 @@ function apiRoutes(app){
             res.json(results)
         }).catch(console.err)
     })
+    app.delete("/api/books/:id", (req, res)=>{
+        db.Book.remove({_id: req.params.id}).then((data)=>
+        res.json(data))
+    })
 }
 
 module.exports = apiRoutes;

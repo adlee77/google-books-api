@@ -1,0 +1,22 @@
+.header-container {
+    padding-top: 50px;
+}
+.bg-light {
+    background-color: #25292F!important;
+}
+#navtitle {
+    color: white;
+}
+.searchbtn {
+    background-color: #25292F!important;
+    color: white;
+    border: none;
+}
+h5, h6 {
+    color: black;
+    padding-left: 15px;
+}
+#noSaved {
+    position: relative;
+    top: 50px;
+}
