@@ -44,6 +44,7 @@ class Saved extends Component {
         </div>
           )})}
         <div className="col text-center">
+              <h3>{this.state.books.length === 0 ? "No Saved Books!" : ""}</h3>
         </div>
       </div>
     );
