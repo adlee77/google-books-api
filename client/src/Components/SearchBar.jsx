@@ -16,9 +16,10 @@ function SearchBar(props) {
                   value={props.search}
                   onChange={props.handleChange}
                   className="form-control"
+                  placeholder="i.e. Harry Potter"
                 />
                 <div className="input-group-append">
-                  <button className="btn btn-outline-secondary searchbtn" type="Submit" onClick={props.handleSubmit}>
+                  <button className="btn btn-outline-secondary searchbtn" type="submit" onClick={props.handleSubmit}>
                     Search
                   </button>
                 </div>

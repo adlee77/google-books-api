@@ -18,10 +18,11 @@ class Saved extends Component {
     return (
       <>
       <div className="row">
-                <div className="col text-center">
+          <div className="col text-center">
             <img id="books" src="https://anshulsinha01.files.wordpress.com/2016/03/book-library-header-2109a.jpg"/>
-            </div>
-            </div>
+          </div>
+      </div>
+      <br/>
       <div className="container">
           {this.state.books.map((book) => {
               return (
