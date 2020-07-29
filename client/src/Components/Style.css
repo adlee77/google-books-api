@@ -28,5 +28,6 @@ h1, h2{
 }
 #books {
     position: relative;
-    left: 220px;
+    bottom: 20px;
+    margin-bottom: -20px;
 }

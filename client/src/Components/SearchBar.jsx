@@ -6,9 +6,7 @@ function SearchBar(props) {
     return (
       <>
         <div className="container">
-          <div className="row">
-          <div className="col">Book Search</div>
-          </div>
+          <br/>
           <div className="row">
             <div className="col">
               <div className="input-group mb-3">

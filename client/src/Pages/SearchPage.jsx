@@ -37,8 +37,12 @@ class SearchPage extends Component{
         return(
             <>
             {console.log(this.state.results)}
-            <SearchBar handleSubmit={this.handleSubmit} handleChange={this.handleChange} search={this.state.search}/>
+            <div className="row">
+                <div className="col text-center">
             <img id="books" src="https://anshulsinha01.files.wordpress.com/2016/03/book-library-header-2109a.jpg"/>
+            </div>
+            </div>
+            <SearchBar handleSubmit={this.handleSubmit} handleChange={this.handleChange} search={this.state.search}/>
             <Results results={this.state.results} handleSave={this.handleSave}/>
             </>
         )
