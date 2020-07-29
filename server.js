@@ -21,7 +21,7 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Book")
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Book", { useNewUrlParser: true, useUnifiedTopology: true })
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
