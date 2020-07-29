@@ -16,6 +16,12 @@ class Saved extends Component {
     }
     render() {
     return (
+      <>
+      <div className="row">
+                <div className="col text-center">
+            <img id="books" src="https://anshulsinha01.files.wordpress.com/2016/03/book-library-header-2109a.jpg"/>
+            </div>
+            </div>
       <div className="container">
           {this.state.books.map((book) => {
               return (
@@ -47,6 +53,7 @@ class Saved extends Component {
               <h3>{this.state.books.length === 0 ? "No Saved Books!" : ""}</h3>
         </div>
       </div>
+      </>
     );
     }
 }
