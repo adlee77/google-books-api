@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <a className="navbar-brand" id="navtitle" href="/">
-        Google Books
+        Google Books App
       </a>
       <button
         className="navbar-toggler"
