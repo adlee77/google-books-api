@@ -1,3 +1,10 @@
+## This is one of my first React Apps
+* This app helps avid readers, such as myself, find and save the books they love.
+* This app utilizes Google Books API and lets users search through Google's extensive book list.
+* Users can then save the books they wish to read later in a Mongo database.
+
+## Below are the basic React instructions to run this app locally.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
