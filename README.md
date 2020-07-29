@@ -1,4 +1,4 @@
-# * Link to my app - [Google Books App](https://googlebooks-api-app.herokuapp.com/)
+# Link to my app - [Google Books App](https://googlebooks-api-app.herokuapp.com/)
 
 ## The app for book lovers everywhere!
 I created this app with the intention that I'd use it to keep track of all the books I plan on reading. 
