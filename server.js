@@ -1,25 +1,24 @@
 const express = require("express");
 const path = require("path");
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 300;
 const app = express();
+const cors = require('cors');
 const mongoose = require("mongoose")
+
 
 require('dotenv').config();
 // Define middleware here
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
 
-require("./routes/apiRoutes")(app)
 // Define API routes here
-
+const apiRoutes = require('./routes/apiRoutes');
+app.use('/api', apiRoutes);
 // Send every other request to the React app
 // Define any API routes before this runs
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  res.sendFile(path.join(__dirname, "./public/index.html"));
 });
 
 mongoose.connect(process.env.ATLAS_URI, { useNewUrlParser: true, useUnifiedTopology: true })

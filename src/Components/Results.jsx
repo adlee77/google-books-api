@@ -5,6 +5,9 @@ function Results(props){
     return(
         <div className="container">
             {props.results.map((result) => {
+                if (result.volumeInfo.imageLinks) {
+                    var img = result.volumeInfo.imageLinks.smallThumbnail;
+                }
                 return(
                     <div className="card" key={result.id}>
                     <div className="card-body">
@@ -19,7 +22,7 @@ function Results(props){
                         <p>{result.volumeInfo.description}</p>
                     </div>
                     <div className="col text-right">
-                        <img src={result.volumeInfo.imageLinks.smallThumbnail} alt="book cover missing"/>
+                        {img && <img src={result.volumeInfo.imageLinks.thumbnail} alt="book cover missing"/>} 
                     </div>
                     </div>
                     <div className="row">
