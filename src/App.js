@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Header from "./Components/Header";
 import SearchPage from "./Pages/SearchPage"
@@ -12,10 +12,12 @@ class App extends Component {
         <Navbar />
         <Header />
         <br/>
-        <Router>
-          <Route exact path="/" component={SearchPage}/>
-          <Route exact path="/saved" component={Saved}/>
-        </Router>
+        <BrowserRouter>
+          <Routes>
+            <Route exact path="/" element={<SearchPage />}/>
+            <Route exact path="/saved"  element={<Saved />}/>
+          </Routes>
+        </BrowserRouter>
       </div>
     );
   }
