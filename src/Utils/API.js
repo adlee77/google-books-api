@@ -1,15 +1,15 @@
 import axios from "axios";
 export default{
     getGoogleBooks: function(title){
-        return axios.get("http://localhost:3000/api/googlebooks/" + title)
+        return axios.get("http://localhost:3001/api/googlebooks/" + title)
     },
     saveBook: function(bookData){
-        return axios.post("http://localhost:3000/api/books", bookData)
+        return axios.post("http://localhost:3001/api/books", bookData)
     },
     getSavedBooks: function(){
-        return axios.get("/api/books")
+        return axios.get("http://localhost:3001/api/books")
     },
     deleteSavedBook: function(bookId){
-        return axios.delete("/api/books/" + bookId)
+        return axios.delete("http://localhost:3001/api/books/" + bookId)
     }
 }
