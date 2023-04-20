@@ -14,7 +14,8 @@ class SearchPage extends Component{
             [name] : value
         })
     }
-    handleSubmit = () => {
+    handleSubmit = (e) => {
+        e.preventDefault();
         API.getGoogleBooks(this.state.search).then((results)=>{
             this.setState({
                 results: results.data

@@ -2,14 +2,13 @@ import React from "react";
 import './Style.css';
 
 function SearchBar(props) {
-  console.log(props)
     return (
       <>
         <div className="container">
           <br/>
           <div className="row">
             <div className="col">
-              <div className="input-group mb-3">
+              <form onSubmit={props.handleSubmit} className="input-group mb-3">
                 <input
                   autoComplete="off"
                   name="search"
@@ -19,11 +18,11 @@ function SearchBar(props) {
                   placeholder="i.e. Harry Potter"
                 />
                 <div className="input-group-append">
-                  <button className="btn btn-outline-secondary searchbtn" type="submit" onClick={props.handleSubmit}>
+                  <button className="btn btn-outline-secondary searchbtn" type="submit" onSubmit={props.handleSubmit}>
                     Search
                   </button>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
