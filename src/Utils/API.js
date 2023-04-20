@@ -1,5 +1,5 @@
 import axios from "axios";
-export default{
+const functions = {
     getGoogleBooks: function(title){
         return axios.get("http://localhost:3001/api/googlebooks/" + title)
     },
@@ -13,3 +13,5 @@ export default{
         return axios.delete("http://localhost:3001/api/books/" + bookId)
     }
 }
+
+export default functions;
