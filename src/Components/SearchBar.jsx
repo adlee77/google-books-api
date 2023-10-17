@@ -6,7 +6,7 @@ function SearchBar(props) {
       <>
         <div className="container">
           <br/>
-          <div className="row">
+          <div className="row searchRow">
             <div className="col">
               <form onSubmit={props.handleSubmit} className="input-group mb-3">
                 <input

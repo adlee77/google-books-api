@@ -16,10 +16,12 @@ class SearchPage extends Component{
     }
     handleSubmit = (e) => {
         e.preventDefault();
+        document.querySelector('.searchRow').insertAdjacentHTML('afterEnd', '<div class="load-message">*If you are seeing this message, it is because I use a free service for my API calls and it probably went to sleep. Please be patient, I apologize.</div>');
         API.getGoogleBooks(this.state.search).then((results)=>{
             this.setState({
                 results: results.data
             })
+            document.querySelectorAll('.load-message').forEach(e => e.remove());
         })
     }
     handleSave = id => {
