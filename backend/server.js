@@ -20,6 +20,11 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./index.html"));
 });
 
+app.use(express.static(path.join(__dirname, "client", "build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
+
 mongoose.connect(process.env.ATLAS_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 const connection = mongoose.connection;
 
