@@ -1,16 +1,16 @@
 import axios from "axios";
 const functions = {
     getGoogleBooks: function(title){
-        return axios.get("https://google-books-api.onrender.com/api/googlebooks/" + title)
+        return axios.get("/api/googlebooks/" + title)
     },
     saveBook: function(bookData){
-        return axios.post("https://google-books-api.onrender.com/api/books", bookData)
+        return axios.post("/api/books", bookData)
     },
     getSavedBooks: function(){
-        return axios.get("https://google-books-api.onrender.com/api/books")
+        return axios.get("/api/books")
     },
     deleteSavedBook: function(bookId){
-        return axios.delete("https://google-books-api.onrender.com/api/books/" + bookId)
+        return axios.delete("/api/books/" + bookId)
     }
 }
 
