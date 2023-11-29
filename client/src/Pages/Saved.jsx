@@ -16,7 +16,7 @@ class Saved extends Component {
     }
     render() {
     return (
-      <>
+      <div>
       <div className="row">
           <div className="col text-center">
             <img id="books" alt="book-banner" src="https://anshulsinha01.files.wordpress.com/2016/03/book-library-header-2109a.jpg"/>
@@ -55,7 +55,7 @@ class Saved extends Component {
               <h3>{this.state.books.length === 0 ? "No Saved Books!" : ""}</h3>
         </div>
       </div>
-      </>
+      </div>
     );
     }
 }
