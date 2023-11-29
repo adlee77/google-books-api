@@ -3,7 +3,7 @@ import './Style.css';
 
 function Header() {
     return(
-        <>
+
         <div className="container header-container">
             <div className="row">
                 <div className="col text-center">
@@ -16,7 +16,7 @@ function Header() {
                 </div>
             </div>
         </div>
-        </>
+
     )
 }
 

@@ -3,7 +3,7 @@ import './Style.css';
 
 function SearchBar(props) {
     return (
-      <>
+
         <div className="container">
           <br/>
           <div className="row searchRow">
@@ -26,7 +26,7 @@ function SearchBar(props) {
             </div>
           </div>
         </div>
-      </>
+
     );
 }
 
