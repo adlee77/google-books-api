@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require("express");
 const path = require("path");
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8080;
 const app = express();
 const cors = require('cors');
 const mongoose = require("mongoose")
@@ -18,11 +18,12 @@ if (process.env.NODE_ENV === "production") {
 // Define API routes here
 const apiRoutes = require('./routes/apiRoutes');
 app.use('/api', apiRoutes);
-// Send every other request to the React app
-// Define any API routes before this runs
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+
+
+app.use(express.static(path.join(__dirname, './build')))
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, './build'))
+})
 
 mongoose.connect(process.env.ATLAS_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 const connection = mongoose.connection;
