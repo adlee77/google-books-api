@@ -1,10 +1,21 @@
 import React, { Component } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Header from "./Components/Header";
 import SearchPage from "./Pages/SearchPage"
 import Saved from "./Pages/Saved";
 
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <SearchPage />
+  },
+  {
+    path: "/saved",
+    element: <Saved />
+  }
+])
 class App extends Component {
   render() {
     return (
@@ -12,12 +23,7 @@ class App extends Component {
         <Navbar />
         <Header />
         <br/>
-        <BrowserRouter>
-          <Routes>
-            <Route exact path="/" element={<SearchPage />}/>
-            <Route exact path="/saved"  element={<Saved />}/>
-          </Routes>
-        </BrowserRouter>
+        <RouterProvider router={router} />
       </div>
     );
   }
